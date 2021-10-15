@@ -3,27 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvc;
+package formula1;
 
-import mvc.controlador.Controlador;
-import mvc.modelos.Modelo;
-import mvc.vistas.Vista;
+import formula1.controladores.Controlador;
+import formula1.modelos.ModeloBD;
+import formula1.vistas.Vista;
 
 /**
  *
  * @author 503
  */
-public class MVC {
+public class Formula1 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
+        ModeloBD modelo = new ModeloBD();
         Vista vista = new Vista();
         vista.setVisible(true);
-        Modelo modelo = new Modelo();
-        Controlador controlador = new Controlador(modelo,vista);
+        
+        Controlador controlador = new Controlador(modelo, vista);
     }
     
 }
